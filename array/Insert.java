@@ -24,7 +24,6 @@ public class Insert {
 
   public static void main(String[] args) {
     int capacity = 5;
-    int usedSpace = 0;
     int[] arr = new int[capacity];
 
     insertElement(arr, 0, capacity, 1, 2);
