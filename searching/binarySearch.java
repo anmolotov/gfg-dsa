@@ -1,6 +1,5 @@
 public class binarySearch {
   static int search(int[] arr, int val) {
-    boolean found = false;
     int left = 0;
     int right = arr.length - 1;
 
