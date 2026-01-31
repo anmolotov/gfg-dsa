@@ -19,21 +19,21 @@ public class binarySearch {
   }
 
   static int recursiveSearch(int[] arr, int left, int right, int val) {
-
-    while (left <= right) {
-      int mid = left + (right - left) / 2;
-      if (val == arr[mid]) {
-        return mid;
-      } else if (arr[mid] < val) {
-        left = mid + 1;
-        recursiveSearch(arr, left, right, val);
-      } else {
-        right = mid - 1;
-        recursiveSearch(arr, left, right, val);
-      }
+    if (left > right) {
+      return -1;
     }
 
-    return -1;
+    int mid = left + (right - left) / 2;
+
+    if (val == arr[mid]) {
+      return mid;
+    } else if (arr[mid] < val) {
+      left = mid + 1;
+      return recursiveSearch(arr, left, right, val);
+    } else {
+      right = mid - 1;
+      return recursiveSearch(arr, left, right, val);
+    }
   }
 
   public static void main(String[] args) {
